@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  pincode: MyString
+  quotation_date: 2023-05-07 06:48:39
+  total_area: 1.5
+  total_units: 1.5
+  is_bill: false
+  total_amt: 1.5
+  s_gst: 1.5
+  c_gst: 1.5
+  grand_total: 1.5
+
+two:
+  name: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  pincode: MyString
+  quotation_date: 2023-05-07 06:48:39
+  total_area: 1.5
+  total_units: 1.5
+  is_bill: false
+  total_amt: 1.5
+  s_gst: 1.5
+  c_gst: 1.5
+  grand_total: 1.5
