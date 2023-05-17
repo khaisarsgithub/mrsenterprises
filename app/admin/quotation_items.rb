@@ -6,7 +6,7 @@ ActiveAdmin.register QuotationItem do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  menu false
+  menu
   permit_params :quotation_id, :item_id, :quantity, :price
   #
   # or

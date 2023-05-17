@@ -1,111 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    
-</head>
-<body>
-    <div class="container mt-6 mb-7">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 col-xl-7">
-            <div class="card">
-              <div class="card-body p-5">
-                <!-- <h2>
-                  MRS Enterprises
-                </h2>
-                <p class="fs-sm">
-                  Ass No.7225/17/2, Survy No.721/C/4, P.No.17/2, <br>
-                  Honalli Road, Guggurahatti, Ballari - 583 101. <br>
-                  Phone:  9741571372,  9741627403,  7892046870.
-                </p> -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>MRS</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-                <!-- <div class="border-top border-gray-200 pt-4 mt-4"> -->
-                  <div class="row">
-                    <div class="col-md-8">
-                      <h2>
-                        MRS Enterprises
-                      </h2>
-                      <p class="fs-sm">
-                        Ass No.7225/17/2, Survy No.721/C/4, P.No.17/2, <br>
-                        Honalli Road, Guggurahatti, Ballari - 583 101. <br>
-                        Phone:  9741571372,  9741627403,  7892046870.
-                      </p>
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                      <div class="text-muted mb-2">Quotation Date</div>
-                      <strong>Feb/09/20</strong>
-                    </div>
-                  </div>
-                <!-- </div> -->
-    
-                <div class="border-top border-gray-200 mt-4 py-4">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="text-muted mb-2"><strong>Client</strong></div>
-                      <strong>
-                        Khaisar
-                      </strong>
-                      <p class="fs-sm">
-                        NR Colony, Guggurahatti, Ballari, 583 101
-                        <br>
-                        <a href="#!" class="text-purple">khaisar@email.com
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-    
-                <table class="table border-bottom border-gray-200 mt-3">
-                  <thead>
-                    <tr>
-                      <th scope="col" class="fs-sm text-dark text-uppercase-bold-sm px-0">Items</th>
-                      <th scope="col" class="fs-sm text-dark text-uppercase-bold-sm px-0">Quantity</th>
-                      <th scope="col" class="fs-sm text-dark text-uppercase-bold-sm text-end px-0">Amount</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="px-0">3x4</td>
-                      <td class="text-md px-0">2</td>
-                      <td class="text-end px-0">₹ 60.00</td>
-                    </tr>
-                    
-                    <tr>
-                      <td class="px-0">4x4</td>
-                      <td class="text-md px-0">4</td>
-                      <td class="text-end px-0">₹ 80.00</td>
-                    </tr>
-                  </tbody>
-                </table>
-    
-                <div class="mt-5">
-                  <div class="d-flex justify-content-end">
-                    <p class="text-muted me-3">Total Amount</p>
-                    <span>₹ 390.00</span>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <p class="text-muted me-3">C-GST</p>
-                    <span>₹ 40.00</span>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <p class="text-muted me-3">S-GST</p>
-                    <span>₹ 40.00</span>
-                  </div>
-                  <div class="d-flex justify-content-end mt-3">
-                    <h5 class="me-3">Total:</h5>
-                    <h5 class="text-success">₹ 399.99 Rupees</h5>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-    </div>
-    # <%= link_to "PDF", pdf_generate_path(format: :pdf) %>
-</body>
+      .table-bordered td,
+      .table-bordered th {
+        border: 1px solid #ddd;
+        padding: 10px;
+        word-break: break-all;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+      }
+      .h4-14 h4 {
+        font-size: 12px;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+      .img {
+        margin-left: "auto";
+        margin-top: "auto";
+        height: 30px;
+      }
+      pre,
+      p {
+        /* width: 99%; */
+        /* overflow: auto; */
+        /* bpicklist: 1px solid #aaa; */
+        padding: 0;
+        margin: 0;
+      }
+      table {
+        font-family: arial, sans-serif;
+        width: 100%;
+        border-collapse: collapse;
+        padding: 1px;
+      }
+      .hm-p p {
+        text-align: left;
+        padding: 1px;
+        padding: 5px 4px;
+      }
+      td,
+      th {
+        text-align: left;
+        padding: 8px 6px;
+      }
+      .table-b td,
+      .table-b th {
+        border: 1px solid #ddd;
+      }
+      th {
+        /* background-color: #ddd; */
+      }
+      .hm-p td,
+      .hm-p th {
+        padding: 3px 0px;
+      }
+      .cropped {
+        float: right;
+        margin-bottom: 20px;
+        height: 100px; /* height of container */
+        overflow: hidden;
+      }
+      .cropped img {
+        width: 400px;
+        margin: 8px 0px 0px 80px;
+      }
+      .main-pd-wrapper {
+        box-shadow: 0 0 10px #ddd;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 15px;
+      }
+      .table-bordered td,
+      .table-bordered th {
+        border: 1px solid #ddd;
+        padding: 10px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main-pd-wrapper" style="width: 1000px; margin: auto">
+      <table
+        class="table table-bordered h4-14"
+        style="width: 100%; -fs-table-paginate: paginate; margin-top: 15px"
+      >
+        <thead style="display: table-header-group">
+          <tr
+            style="
+              margin: 0;
+              background: #fcbd021f;
+              padding: 15px;
+              padding-left: 20px;
+              -webkit-print-color-adjust: exact;
+            "
+          >
+          <td colspan="7">
+              <h3>To</h3>
+              <h3><%= @quotation.name %></h3>
+              <p><%= @quotation.address %>, <%= @quotation.city %></p>
+              <p><%= @quotation.state %>, India. <%= @quotation.pincode %></p>
+              <p>Quotation Date: <%= @quotation_date %></p>
+            </td>
+            <td colspan="8">
+              <h3>
+                MRS Enterprises<br>
+                <p
+                  style="
+                    font-weight: 300;
+                    font-size: 85%;
+                    color: #626262;
+                    margin-top: 7px;
+                  "
+                >
+                Ass No.7225/17/2, Survy No.721/C/4, P.No.17/2, <br>
+                Honalli Road, Guggurahatti, Ballari - 583 101. <br>
+                Phone: 9741571372, 9741627403, 7892046870.<br />
+                </p>
+              </h3>
+            </td>
+          </tr>
+          <tr>
+            <th style="width: 150px"><h4>Item Name</h4></th>
+            <th style="width: 80px">
+              <h4>
+                Unit<br>Price
+              </h4>
+            </th>
+            <th style="width: 80px"><h4>QTY</h4></th>
+            <th style="width: 80px">
+              <h4>
+                Units
+              </h4>
+            </th>
+            <th style="width: 140px"><h4>TOTAL</h4></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @quotation_items.each do |item| %>
+          <tr>
+            <td> <%= item.item.name %></td>
+            <td><%= item.item.price %></td>
+            <td><%= item.quantity %></td>
+            <td><%= item.item.units %></td>
+            <td><%= item.price %></td>
+          </tr>
+        <% end %>
+        </tbody>
+        <tfoot></tfoot>
+      </table>
+
+      <table class="hm-p table-bordered" style="width: 100%; margin-top: 30px">
+        <tr>
+          <th style="width: 400px">
+            Total Items
+          </th>
+          <td style="vertical-align: top; color: #000">
+            <b><%= @total_units %></b>
+          </td>
+        <tr>
+          <th style="width: 400px">
+            Total Units
+          </th>
+          <td style="vertical-align: top; color: #000">
+            <b><%= @total_area %></b>
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 400px">
+            Total Price
+          </th>
+          <td style="vertical-align: top; color: #000">
+            <b><%= @total_amt %></b>
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 400px">
+            C-GST
+          </th>
+          <td style="vertical-align: top; color: #000">
+            <b><%= @c_gst %></b>
+          </td>
+        </tr>
+        <tr>
+          <th style="vertical-align: top">S-GST</th>
+          <td style="vertical-align: top; color: #000">
+            <b> <%= @s_gst %></b>
+          </td>
+        </tr>
+      </table>
+
+      <table class="hm-p table-bordered" style="width: 100%; margin-top: 30px">
+        <tr style="background: #fcbd02">
+          <th>Total Order Value</th>
+          <td style="width: 150px; text-align: right; border-right: none">
+            <b><%= @grand_total %></b>
+          </td>
+          <td colspan="5" style="border-left: none"></td>
+        </tr>
+      </table>
+
+      <table style="width: 100%" cellspacing="0" cellspadding="0" border="0">
+        <tr>
+          <td>
+            <p>
+              This is computer generated quotation and hence signature is not
+              required
+            </p>
+          </td>
+          <td>
+            <h4 style="margin: 0; text-align: right">
+              MRS Enterprises - LLP
+            </h4>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </body>
 </html>
+

@@ -6,6 +6,10 @@
 #
 default: &default
   adapter: sqlite3
+  # encoding: unicode
+  # host: localhost
+  # username: mrs
+  # password: MRS118@Database
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 

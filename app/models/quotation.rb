@@ -3,27 +3,28 @@ class Quotation < ApplicationRecord
   has_many :items, through: :quotation_items
   accepts_nested_attributes_for :quotation_items, allow_destroy: true
 
-
   validates :name, presence: true
   validates :address, presence: true
   validates :city, presence: true
   validates :state, presence: true
   validates :pincode, presence: true
 
-
-  scope :is_bill, -> { where(is_bill: true) }
+  # before_validation :update_quotation
+  # before_create :update_quotation
   before_save :update_quotation
 
   def update_quotation
-    self.quotation_date = DateTime.now
-    items = self.quotation_items.includes(:item)
+    if self.quotation_date == nil
+      self.quotation_date = DateTime.now
+    end
+    items = self.quotation_items
     area = 0
-    units = items.length
+    units = 0
     price = 0
     items.each do |item|
-      area += item.item.width * item.item.height
-      # units += item.item.units
-      price += item.item.price
+      area += item.item.width * item.item.height * item.quantity
+      units += item.quantity
+      price += item.item.price * item.quantity
     end
     self.total_area = area
     self.total_units = units
